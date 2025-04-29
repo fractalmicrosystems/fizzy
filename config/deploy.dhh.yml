@@ -10,6 +10,5 @@ servers:
 env:
   clear:
     ARTENANT: test
-    WEB_CONCURRENCY: 14
 
 proxy: false
