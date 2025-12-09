@@ -3,6 +3,21 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Email provider Settings
+  #
+  # Configure these according to whichever email provider you use. An example setup
+  # using SMTP looks like the following:
+  #
+  # config.action_mailer.smtp_settings = {
+  #   address:              'smtp.example.com', # The address of your email provider's SMTP server
+  #   port:                 2525,
+  #   domain:               'example.com',      # Your domain, which Fizzy will send email from
+  #   user_name:            ENV["SMTP_USERNAME"],
+  #   password:             ENV["SMTP_PASSWORD"],
+  #   authentication:       :plain,
+  #   enable_starttls_auto: true
+  # }
+
   # Code is not reloaded between requests.
   config.enable_reloading = false
 
@@ -39,10 +54,10 @@ Rails.application.configure do
 
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
   # Can be used together with config.force_ssl for Strict-Transport-Security and secure cookies.
-  config.assume_ssl = true
+  config.assume_ssl = ENV.fetch("ASSUME_SSL", "true") == "true"
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  config.force_ssl = ENV.fetch("FORCE_SSL", "true") == "true"
 
   # Log to STDOUT by default
   config.logger = ActiveSupport::Logger.new(STDOUT)

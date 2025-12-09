@@ -141,7 +141,7 @@
     }
 
     @media (max-width: 799px) {
-      --padding-inline: var(--main-padding);
+      --padding-inline: 1.5ch;
 
       column-gap: 0;
       grid-template-areas:
