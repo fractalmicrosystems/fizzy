@@ -42,7 +42,7 @@ class ApplicationPlatform < PlatformAgent
   end
 
   def ios_app?
-    match? /Fizzy iOS/
+    match? /Fizzy iOS/ # Change to /Hotwire Native iOS/?
   end
 
   def android_app?
