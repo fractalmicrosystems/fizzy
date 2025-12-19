@@ -15,7 +15,6 @@ ssh:
   user: root  # If you use a different username to SSH to your server, specify it here
 
 proxy:
-  app_port: 3000
   forward_headers: true
 
 # Your application configuration (secrets come from .kamal/secrets).
