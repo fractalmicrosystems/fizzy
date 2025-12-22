@@ -18,6 +18,9 @@ proxy:
   forward_headers: true
   response_timeout: 60
 
+deploy_timeout: 60
+drain_timeout: 60
+
 # Your application configuration (secrets come from .kamal/secrets).
 env:
   secret:
