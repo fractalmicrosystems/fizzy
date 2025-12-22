@@ -40,6 +40,7 @@ env:
     DATABASE_ADAPTER: mysql
     FORCE_SSL: 'false'
     MAILER_FROM_ADDRESS: fizzy@fractul.org # The email "from" address that Fizzy sends email from
+    S3_FORCE_PATH_STYLE: true
     SMTP_ADDRESS: smtp.purelymail.com # The SMTP server you'll use to send email
     SMTP_TLS: 'true'
     MULTI_TENANT: true # Set to true to allow multiple accounts to sign up
